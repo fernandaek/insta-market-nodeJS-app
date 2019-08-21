@@ -1,8 +1,9 @@
 <% include ../partials/header %>
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link 
+  rel="stylesheet"  type='text/css'><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+
 
  <style>
 body {
@@ -72,7 +73,8 @@ body {
 				<% product.comments.forEach((comment) => { %>
 				<div class="row">
 					<div class="col-md-12">
-						<strong><%= comment.author.username %></strong>
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							<strong><%= comment.author.username %></strong>
 						<span class="pull-right">10 days ago</span>
 						<p>
 							<%= comment.text %>
