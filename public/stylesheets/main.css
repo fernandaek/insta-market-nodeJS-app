@@ -7,3 +7,7 @@
 .delete-form {
 	display: inline;
 }
+
+#container-form {
+	width: 30%;
+}

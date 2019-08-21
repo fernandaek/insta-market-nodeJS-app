@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var Product = require("./models/product");
 var Comment   = require("./models/comment");
+var faker = require("faker");
 
 var seeds = [
     {
@@ -50,5 +51,6 @@ async function seedDB(){
 	}
          
 }
+
 
 module.exports = seedDB;
