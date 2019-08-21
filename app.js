@@ -17,21 +17,21 @@ var commentRoutes    = require("./routes/comments"),
 	productRoutes = require("./routes/products"),
 	indexRoutes		 = require("./routes/index")
 
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/product_v1";
-mongoose.connect(url, {useNewUrlParser: true});//creating a database in mongodb named product_version1
+//var url = process.env.DATABASEURL || "mongodb://localhost:27017/product_v1";
+//mongoose.connect(url, {useNewUrlParser: true});//creating a database in mongodb named product_version1
 
 
 
 //===============================================================================================================================
 //================================DELETE IT BEFORE DEPLOY========================================================================
 
-//mongoose.connect("mongodb+srv://fernandaek:!RrkV.GkWNRd96J@cluster0-srmlq.mongodb.net/test?retryWrites=true&w=majority", 
-//				 {useNewUrlParser: true, useCreateIndex: true}).then(() => { //creating a database in mongodb named producr_v1
-//					console.log("Connected to DB");
-//				}).catch(err => {
-//					console.log("ERROR: " + err.message);
-//				});
-//app.use(bodyParser.urlencoded({extended: true}));
+mongoose.connect("mongodb+srv://fernandaek:!RrkV.GkWNRd96J@cluster0-srmlq.mongodb.net/test?retryWrites=true&w=majority", 
+				 {useNewUrlParser: true, useCreateIndex: true}).then(() => { //creating a database in mongodb named producr_v1
+					console.log("Connected to DB");
+				}).catch(err => {
+					console.log("ERROR: " + err.message);
+				});
+app.use(bodyParser.urlencoded({extended: true}));
 
 //=================================DELETE IT BEFORE DEPLOY========================================================================
 //================================================================================================================================
