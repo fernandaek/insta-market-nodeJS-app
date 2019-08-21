@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var Product = require("../models/product");
 var middleware = require("../middleware");
+var multer = require("multer");
 
 //INDEX ROUTE - Show all products
 router.get("/products", (request, response) =>{
