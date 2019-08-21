@@ -17,3 +17,10 @@
 	font-size: 20px;
     margin-right: 5px;
 }
+
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
