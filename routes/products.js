@@ -44,11 +44,13 @@ router.post("/products", middleware.isLoggedIn, (request, response) => {
 		var price = request.body.price;
 		var image = request.body.image;
 		var desc = request.body.description;
+		var location = request.body.location;
+		var coordinates = request.body.coordinates;
 		var author = {
 			id: request.user._id,
 			username: request.user.username
 		}
-		var newProduct = {name: name, price: price, image: image, description: desc, author: author}
+		var newProduct = {name: name, price: price, image: image, description: desc,location: location, coordinates: coordinates, author: author}
 		
 		//products.push(newProduct);
 		Product.create(newProduct, (err, newlyCreated)=>{

@@ -6,6 +6,8 @@ var mongoose = require("mongoose");
 		price: String,
 		image: String,
 		description: String,
+		location: String,
+		coordinates: Array,
 		author: {
 			id:{
 				type: mongoose.Schema.Types.ObjectId,
