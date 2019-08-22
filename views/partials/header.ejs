@@ -32,7 +32,7 @@
                     <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login"><span class="fa  fa-user fa-lg "></span> Login</a></li>
                     <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register"><span class="fa fa-user-plus fa-lg "></span> Sign Up</a></li>
                 <% } else { %>
-                    <li><a href="#">Signed in as <%= currentUser.username %></a></li>
+                    <li><a href="#">Signed in as <strong><em><%= currentUser.username %></em></strong></a></li>
                     <li><a href="/logout">Logout</a></li>
                 <% } %>
             </ul>
