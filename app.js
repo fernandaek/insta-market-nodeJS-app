@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose"); //mongoose.set('useNewUrlParser', true);//updating
 var flash = require("connect-flash");
+var moment = require("moment");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var methodOverride = require("method-override");
@@ -64,6 +65,8 @@ app.use(require("express-session")({
 
 app.use(passport.initialize());//setting passport app to work in our application
 app.use(passport.session());//setting passport app to work in our application
+
+app.locals.moment = require("moment");
 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser()); //resposible to read the session, taking the date from the session that is uncoded and encode it

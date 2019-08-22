@@ -40,11 +40,11 @@ body {
 <div class="container">
 	<div class="row">
 		<div class="col-md-3">
-			<p class="lead">Instamarket</p>
+			<p class="lead">InstaMarket</p>
 			<div class="list-group">
 				<li class="list-group-item active"><%= product.location %></li>
 				<li class="list-group-item">Salles: <%= product.author.username %></li>
-				<li class="list-group-item">Info 3</li>
+				<li class="list-group-item">Phone: (+46) 55 555 55 55</li>
 			</div>
 			<div id='map'></div>
 		</div>
@@ -55,7 +55,7 @@ body {
 					<h4 class="pull-right">$<%= product.price %></h4>
 					<h4><a><%= product.name %></a></h4>
 					<p><%= product.description %></p>
-					<p><em> Submitted by <%= product.author.username %></em></p>
+					<p><em> Submitted by </em><strong><%= product.author.username %>,</strong> <em><%=moment(product.createdAt).fromNow() %></em></p>
 					
 					<% if(currentUser && product.author.id.equals(currentUser._id)) { %>
 					<a class="btn btn-xs btn-warning" href="/products/<%= product._id %>/edit">Edit</a>
@@ -75,7 +75,7 @@ body {
 					<div class="col-md-12">
 						<span id="userIcon" class="glyphicon glyphicon-user" aria-hidden="true"> </span>
 							<strong><%= comment.author.username %></strong>
-						<span class="pull-right">10 days ago</span>
+						<span class="pull-right"><%=moment(comment.createdAt).fromNow() %></span>
 						<p>
 							<%= comment.text %>
 						</p>
