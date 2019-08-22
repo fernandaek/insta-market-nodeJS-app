@@ -44,7 +44,7 @@ middlewareObj.checkCommentOwnership = function(request, response, next) {
 		}
 		else {
 			//is the user the owner of the comment?
-			if(foundComment.author.id.equals(request.user._id)){ //the method equals()is provided by mongoose
+			if(foundComment.author.id.equals(request.user._id) || request.user.isAdmin){ //the method equals()is provided by mongoose
 				next();
 			}
 			else {
