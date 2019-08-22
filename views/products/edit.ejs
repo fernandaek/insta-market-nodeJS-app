@@ -3,7 +3,7 @@
 <div id="container-form" class="container">
 <div class="row">
 <h1 style="text-align: center">Edit <%= product.name %></h1>
-<div style="width: 30%; margin: 30px auto;">
+<div style="width: 70%; margin: 30px auto;">
 	<form action="/products/<%= product._id %>?_method=PUT" method="POST">
 		<div class="form-group">
 			<input class="form-control" type="text" name="product[name]" value="<%= product.name %>">
