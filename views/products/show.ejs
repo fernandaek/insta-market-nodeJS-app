@@ -57,7 +57,7 @@ body {
 					<p><%= product.description %></p>
 					<p><em> Submitted by </em><strong><%= product.author.username %>,</strong> <em><%=moment(product.createdAt).fromNow() %></em></p>
 					
-					<% if(currentUser && product.author.id.equals(currentUser._id)) { %>
+					<% if(currentUser && product.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
 					<a class="btn btn-xs btn-warning" href="/products/<%= product._id %>/edit">Edit</a>
 					<form class="delete-form" action="/products/<%= product._id %>?_method=DELETE" method="POST">
 						<button class="btn btn-xs btn-danger">Delete</button>

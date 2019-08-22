@@ -17,7 +17,7 @@ middlewareObj.checkProductOwnership = function(request, response, next) {
 				}
 				else {
 	//is the user the owner of the product?
-				if(foundProduct.author.id.equals(request.user._id)){ //the method equals()is provided by mongoose
+				if(foundProduct.author.id.equals(request.user._id) || request.user.isAdmin){ //the method equals()is provided by mongoose
 					next();
 				}
 				else {
