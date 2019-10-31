@@ -1,6 +1,6 @@
 # insta-market-nodeJS-app
 
-<img src="">
+<img src="instaMarket.png">
 To see the app in action, go to https://insta-market.herokuapp.com/
 Login: ABCDE
 Password:12345
